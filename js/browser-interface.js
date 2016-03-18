@@ -11,7 +11,6 @@ $(document).ready(function(){
   var username = $('#username').val();
 
   $.get('https://api.github.com/users/' + username + '?access_token=' + apiKey).then(function(response){
-    console.log(response)
 
     var name = response.name;
     var avatar = response.avatar_url;
@@ -31,9 +30,6 @@ $(document).ready(function(){
         if(repo_description === ""){
           repo_description = "<em>no description provided</em>";
         }
-        console.log(repo_name);
-        console.log(repo_createdate);
-        console.log(repo_url);
         console.log(repo_item);
         $('.repo_results').append("<li><a target='_blank' href='" + repo_url + "'>" + repo_name + "</a><p>date created: " + repo_createdate + "</p><p>description: " + repo_description + "</p></li>");
       });
