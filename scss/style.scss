@@ -3,14 +3,20 @@ $mid_brown: #cea67e;
 
 body {
   background-color: $off_white;
+  color: $mid_brown;
 }
 
 h1 {
-  text-align: center;
   color: $mid_brown;
 }
 
 img.avatar {
   width: 100px;
   height: auto;
+  border: 10px solid $mid_brown;
+}
+
+.centered {
+  margin-top: 50px;
+  text-align: center;
 }

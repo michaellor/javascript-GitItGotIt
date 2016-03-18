@@ -18,7 +18,7 @@ $(document).ready(function(){
     var user_url = response.html_url;
     var repos_url = response.repos_url;
 
-    $('.results').empty().append("<img class='avatar' src='" + avatar + "'><li>name: <a target='_blank' href='" + user_url + "'>" + name + "</a></li><li>number of repositories: <a target='_blank' href='" + repos_url + "'>" + repos + "</a></li><hr><ol class='repo_results'></ol>");
+    $('.results').empty().append("<img class='avatar' src='" + avatar + "'><li><strong>name:</strong> <a target='_blank' href='" + user_url + "'>" + name + "</a></li><li><strong>number of repositories:</strong> <a target='_blank' href='" + repos_url + "'>" + repos + "</a></li><hr><ol class='repo_results'><p><strong>Repositories:</strong></p></ol>");
 
     $.get('https://api.github.com/users/' + username + '/repos?access_token=' + apiKey + "&per_page=25").then(function(repo_item){
 
