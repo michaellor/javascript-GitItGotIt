@@ -1,6 +1,6 @@
 var apiKey = require('./../.env').apiKey;
 
-exports.getRepos = function(){
+exports.getRepos = function(username){
 
   $.get('https://api.github.com/users/' + username + '?access_token=' + apiKey).then(function(response){
 
@@ -18,7 +18,7 @@ exports.getRepos = function(){
 
     $('.results').empty().append("<img class='avatar' src='" + avatar + "'><li><strong>name:</strong> <a target='_blank' href='" + user_url + "'>" + name + "</a></li><li><strong>email: </strong>" + email + "<li><strong>followers:</strong> " + followers + "</li><li><strong>following:</strong> " + following + "</li><li><strong>number of repositories:</strong> <a target='_blank' href='" + repos_url + "'>" + repos + "</a></li><hr><ol class='repo_results'><p><strong>Repositories:</strong></p></ol>");
 
-    $.get('https://api.github.com/users/' + username + '/repos?access_token=1fa94088ae5c52eb7e9f7c8d7e6f5644ffb6ca31' + apiKey + "&per_page=25").then(function(repo_item){
+    $.get('https://api.github.com/users/' + username + '/repos?access_token=' + apiKey + "&per_page=15").then(function(repo_item){
 
       $.each(repo_item, function(i) {
         var repo_name = repo_item[i].name;
