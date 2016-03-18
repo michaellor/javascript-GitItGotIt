@@ -1,17 +1,11 @@
-// var Class = require('./../js/class.js').Class;
+var getRepos = require('./../js/getRepos-interface.js').getRepos;
 // var moment = require('moment');
 var apiKey = require('./../.env').apiKey;
 
 $(document).ready(function(){
-
+  $('#username').submit(function(event){
+    event.preventDefault();
+  })
 
 
 });
-
-exports.getRepos = function(){
-  $.get('https://api.github.com/users/daneden?access_token=' + apiKey).then(function(response){
-    console.log(response);
-  }).fail(function(error){
-    console.log(error.responseJSON.message);
-  });
-};
