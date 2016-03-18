@@ -17,7 +17,7 @@ $(document).ready(function(){
     console.log(avatar)
     console.log(repos)
     console.log(reposArray)
-    $('.results').append("<li>username: " + name + " <img class='avatar' src='" + avatar + "'></li><li>number of repositories: " + repos + "</li>");
+    $('.results').append("<img class='avatar' src='" + avatar + "'><li>username: " + name + "</li><li>number of repositories: " + repos + "</li>");
 
   }).fail(function(error){
     console.log(error.responseJSON.message);
