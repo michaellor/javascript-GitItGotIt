@@ -1,12 +1,16 @@
-$light_color: #7ea3c9;
+$off_white: #f8f2ed;
+$mid_brown: #cea67e;
 
-body{
-  .icon{
-    height: 100px;
-    float: right;
-    margin-top: -80px;
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 50px;
-  }
+body {
+  background-color: $off_white;
+}
+
+h1 {
+  text-align: center;
+  color: $mid_brown;
+}
+
+img.avatar {
+  width: 100px;
+  height: auto;
 }
