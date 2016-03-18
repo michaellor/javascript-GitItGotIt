@@ -16,7 +16,17 @@ img.avatar {
   border: 10px solid $mid_brown;
 }
 
+hr {
+  border-color: $mid_brown;
+}
+
 .centered {
   margin-top: 50px;
   text-align: center;
+}
+
+.fa {
+  color: $mid_brown;
+  font-size: 46pt;
+  margin: 10px;
 }
